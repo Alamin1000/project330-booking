@@ -1,25 +1,3 @@
-// $(document).ready(function () {
-//   // custom-modal
-//   $("*[toggle-modal]").click(function () {
-//     var thisis = $(this);
-//     var thisTarget = thisis.attr("toggle-modal");
-//     $(thisTarget).addClass("modal-show");
-//     $("body").addClass("modal-opened");
-//   });
-//   $("*[modal-close]").click(function () {
-//     $(this).parents(".custom-modal").removeClass("modal-show");
-//     $("body").removeClass("modal-opened");
-//   });
-//   $(document).mouseup(function (e) {
-//     var container = $(".modal-content");
-//     // If the target of the click isn't the container
-//     if (!container.is(e.target) && container.has(e.target).length === 0) {
-//       $(".custom-modal").removeClass("modal-show");
-//       $("body").removeClass("modal-opened");
-//     }
-//   });
-// });
-
 // ---------custom-vanilla-js-modal-----------------
 //modal-Open-button
 let modalOpenButton = document.querySelectorAll("[toggle-modal]");
@@ -42,6 +20,21 @@ modalCloseButton.forEach((item) => {
     e.preventDefault();
     // action
     modalClose();
+  });
+});
+// modal-close-when outside click of its content
+let allModal = document.querySelectorAll(".custom-modal:not(.modal-static)"); //except '.modal-static'
+allModal.forEach((modal) => {
+  modal.addEventListener("click", function (event) {
+    // variables
+    let innerContent = this.querySelector(".modal-content");
+    const outsideClick =
+      typeof event.composedPath === "function" &&
+      !event.composedPath().includes(innerContent);
+    // action
+    if (outsideClick) {
+      modalClose();
+    }
   });
 });
 // modalOpen function

@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>booking</title>
+    <title>Booking</title>
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
@@ -12,7 +12,6 @@
       href="https://kit-pro.fontawesome.com/releases/v5.15.2/css/pro.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/default-edit.css" />
     <link rel="stylesheet" type="text/css" href="style.css" />
     <link rel="stylesheet" type="text/css" href="css/responsive.css" />
     <!--End ALL STYLESHEET -->
@@ -62,6 +61,7 @@
                       <a
                         toggle-modal="#edit-modal"
                         href="#"
+                        id="btn-1"
                         class="default-button default-button--light"
                         >Edit</a
                       >
@@ -153,9 +153,14 @@
                         </div>
                         <span class="txt"
                           >09:00 - 10:10
-                          <a href="#" class="info-i color-theme1"
-                            ><i class="fas fa-info-circle"></i></a
-                        ></span>
+                          <a
+                            href="#"
+                            class="info-i color-theme1 tooltip-parent"
+                          >
+                            <i class="fas fa-info-circle"></i>
+                            <div class="tooltip">Tooltip text here</div>
+                          </a>
+                        </span>
                       </div>
                       <div class="booking-item__time__s">
                         <div class="icon">
@@ -306,7 +311,6 @@
     <!-- main-wrap -->
 
     <!-- js -->
-    <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/main.js"></script>
     <!-- End All Js -->
   </body>
