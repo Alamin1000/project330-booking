@@ -1,0 +1,307 @@
+/* ---buttons--- */
+.default-button {
+    padding: 13px 28px;
+    font-size: 14px;
+    border-radius: 5px;
+    font-weight: 400;
+    border: 1px solid #172939;
+    background: rgb(23, 41, 57);
+    color: #A3AFBE;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 1.2;
+    transition: 0.3s;
+}
+.default-button:hover {
+    background: #44525F;
+    color: #fff;
+}
+.default-button.default-button--min-width {
+    min-width: 205px;
+}
+
+.default-button--light {
+    background: #F8F9FA;
+    border-color: #F8F9FA;
+    color: var(--light-color);
+}
+.default-button--light:hover {
+    background: rgb(23, 41, 57);
+    color: #fff;
+    border-color: transparent;
+}
+
+.default-button--white {
+    background: #fff;
+    border-color: #F1F1F1;
+    color: #4B4A4D;
+}
+.default-button--white:hover {
+    background: rgb(23, 41, 57);
+    color: #fff;
+    border-color: transparent;
+}
+
+/* ---buttons---end */
+
+/* small-tools */
+.underline {
+    text-decoration: underline !important;
+}
+.h-initial {
+    height: initial !important;
+}
+.space-nowrap {
+    white-space: nowrap;
+}
+.hidden-scroll {
+    overflow-y: auto !important;
+    -ms-overflow-style: none !important;  /* IE and Edge */
+    scrollbar-width: none !important;  /* Firefox */
+}
+.hidden-scroll::-webkit-scrollbar {
+    display: none !important;
+}
+.pseudo-before-none::before {
+    display: none !important;
+}
+.pseudo-after-none::after {
+    display: none !important;
+}
+.pseudo-none::before,
+.pseudo-none::after {
+    display: none !important;
+}
+
+
+
+.flip {
+    transform: rotateY(180deg);
+}
+.flip-x {
+    transform: rotateX(180deg);
+}
+.rotate1_8 {
+    transform: rotate(45deg) !important;
+}
+.rotate2_8 {
+    transform: rotate(90deg) !important;
+}
+.rotate3_8 {
+    transform: rotate(135deg) !important;
+}
+.rotate4_8 {
+    transform: rotate(180deg) !important;
+}
+.rotate5_8 {
+    transform: rotate(225deg) !important;
+}
+.rotate6_8 {
+    transform: rotate(270deg) !important;
+}
+.rotate7_8 {
+    transform: rotate(315deg) !important;
+}
+.rotate8_8 {
+    transform: rotate(360deg) !important;
+}
+
+
+/* bg */
+.bg-theme1 {
+    background: var(--theme__color1) !important;
+}
+.bg-theme2 {
+    background: var(--theme__color2) !important;
+}
+.bg-theme3 {
+    background: var(--theme__color3) !important;
+}
+.bg-theme4 {
+    background: var(--theme__color4) !important;
+}
+
+/* hover--bg */
+.hover-bg-theme1:hover {
+    background: var(--theme__color1) !important;
+}
+.hover-bg-theme2:hover {
+    background: var(--theme__color2) !important;
+}
+.hover-bg-theme3:hover {
+    background: var(--theme__color3) !important;
+}
+.hover-bg-theme4:hover {
+    background: var(--theme__color4) !important;
+}
+
+
+/* fonts */
+.font1 {
+    font-family: var(--font1);
+}
+.font2 {
+    font-family: var(--font2);
+}
+.font3 {
+    font-family: var(--font3);
+}
+.font4 {
+    font-family: var(--font4);
+}
+
+
+/* text-color */
+.color-white {
+    color: #fff !important;
+}
+.color-text {
+    color: var(--text__color1) !important;
+}
+.color-theme1 {
+    color: var(--theme__color1) !important;
+}
+.color-theme2 {
+    color: var(--theme__color2) !important;
+}
+.color-theme3 {
+    color: var(--theme__color3) !important;
+}
+.color-theme4 {
+    color: var(--theme__color4) !important;
+}
+
+
+/* text-align */
+.text-left {
+    text-align: left !important;
+}
+.text-right {
+    text-align: right !important;
+}
+.text-center {
+    text-align: center !important;
+}
+.text-justified {
+    text-align: justify !important;
+}
+
+
+/* font-weights */
+.fw-300 {
+    font-weight: 300 !important;
+}
+.fw-400 {
+    font-weight: 400 !important;
+}
+.fw-500 {
+    font-weight: 500 !important;
+}
+.fw-600{
+    font-weight: 600!important;
+}
+.fw-700 {
+    font-weight: 700 !important;
+}
+.fw-800{
+    font-weight: 800!important;
+}
+
+
+
+/* nice-select-edit */
+.nice-select {
+    height: initial;
+    min-height: initial;
+    line-height: 1;
+    padding: 0 20px 0 0;
+    float: none;
+    display: inline-block;
+    border: none;
+}
+.nice-select:after {
+    margin-top: -2px;
+}
+.nice-select .list .option,
+.nice-select.open .list .option {
+    font-size: 16px;
+    line-height: initial;
+    min-height: initial;
+    padding: 13px 15px;
+    min-width: 50px;
+}
+.nice-select .option.selected {
+    font-weight: inherit;
+}
+.nice-select .list {
+    border-radius: 2px;
+    min-width: 100%;
+}
+
+@media (max-width: 767px) {
+    .nice-select .list .option,
+    .nice-select.open .list .option {
+        font-size: 16px;
+        line-height: initial;
+        min-height: initial;
+        padding: 8px 12px;
+        min-width: 50px;
+    } 
+}
+
+
+/* ---custom-modal--- */
+.modal-opened {
+    overflow: hidden;
+    padding-right: 17px;
+}
+@media (max-width: 767px) {
+    .modal-opened {
+        padding-right: 0;
+    }
+}
+.custom-modal {
+    top: 0;
+    left: 0;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(62, 65, 72, 0.651);
+    z-index: 1000000;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+}
+.custom-modal.modal-show {
+    opacity: 1;
+    visibility: visible;
+}
+.custom-modal .modal-inner {
+    padding: 0 12px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.modal-content {
+    padding: 25px 0;
+    width: max-content;
+    max-width: 100%;
+    overflow: auto;
+    max-height: 100%;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+.modal-content::-webkit-scrollbar {
+    display: none;
+}
+.modal-content-visible-area {
+    width: 500px; /*width must */
+    max-width: 100%;
+    background: #fff;
+}
+
+

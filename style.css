@@ -1,0 +1,357 @@
+/*-----------------------------------=========Main-Style-Sheet=========----------------------------------------*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap');
+:root {
+  --theme__color1: #DB5C30;
+  --text-color: #1C2935;
+  --light-color: #858585;
+  --nunito: 'Nunito', sans-serif;
+}
+*,::before,::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: #fff;
+  color: var(--light-color);
+  overflow-x: hidden;
+  word-wrap: break-word;
+  word-break: normal;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  font-family: var(--nunito);
+}
+a, a:active, a:focus, a:active, a:hover {
+  text-decoration:none !important;
+  color: inherit;
+}
+input{
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+a:hover,
+a:focus,
+input:focus,
+input:hover,
+select:focus,
+select:hover,
+select:active,
+textarea:focus,
+textarea:hover,
+button:focus {
+  outline: none;
+}
+::placeholder {
+  opacity: 1;
+}
+:focus::placeholder {
+  opacity: 0;
+}
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  table-layout: fixed; /* Prevents HTML tables from becoming too wide */
+  width: 100%;
+}
+img {
+  -ms-interpolation-mode: bicubic;
+  border: 0;
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+iframe {
+  width: 100%;
+}
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6{
+  font-weight: 700;
+  line-height: 1.3;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+p{
+  margin-bottom: 15px;
+}
+p:last-child{
+  margin: 0;
+}
+.main-wrap {
+  width: 100%;
+  overflow: hidden;
+}
+.container {
+  padding: 0 15px;
+  margin: 0 auto;
+  width: 100%;
+}
+@media (max-width: 575px) {
+  .container {
+    max-width: 100%;
+  }
+}
+@media (max-width: 767px) and (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media (max-width: 991px) and (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (max-width: 1199px) and (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (max-width: 1399px) and (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1310px;
+  }
+}
+
+
+/* header */
+.header-section {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+/* header-end */
+
+
+/* ---booking-section--- */
+.booking-section {
+  padding: 100px 0;
+}
+.booking-section__inner {
+
+}
+
+.booking_w_box {
+  max-width: 972px;
+  margin: 0 auto;
+  padding: 48px;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, .15);
+}
+.booking__header {
+  margin: 0 0 55px;
+}
+.booking__header h3 {
+  font-size: 32px;
+  margin: 0 0 5px;
+  font-weight: 600;
+  color: var(--text-color);
+}
+.booking__header p {
+  font-size: 14px;
+}
+
+.booking-item-wrap {
+
+}
+.booking-item {
+  padding: 16px 0;
+  display: flex;
+  transition: 0.3s;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.175);
+  position: relative;
+  z-index: 1;
+}
+.booking-item--striped {
+  background: repeating-linear-gradient( -55deg, #F8F8F8, #F8F8F8 10px, #fff 10px, #fff 20px );
+}
+.booking-item:hover {
+  background: #F8F8F8;
+}
+.booking-item__date {
+  font-size: 15px;
+  line-height: 1;
+  width: 100px;
+  font-weight: 500;
+  text-align: center;
+  position: relative;
+}
+.booking-item__date::after {
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 95%;
+  content: "";
+  background: #ccc;
+}
+.booking-item__date.themed {
+  color: var(--theme__color1);
+}
+.booking-item__date .large {
+  font-size: 30px;
+  margin-top: 3px;
+  display: block;
+  font-weight: 600z;
+}
+.booking-item__time {
+  margin-left: 24px;
+}
+.booking-item__time__s {
+	font-size: 14px;
+	margin-bottom: 6px;
+	gap: 8px;
+	font-weight: 500;
+	display: flex;
+}
+.booking-item__time__s:last-child {
+  margin-bottom: 0;
+}
+.booking-item__time__s .icon {
+  width: 14px;
+  text-align: center;
+}
+.booking-item__des {
+  margin-left: 48px;
+  margin-right: auto;
+}
+.booking-item__des p {
+  font-size: 14px;
+  font-weight: 500;
+}
+.booking-item__des p:last-child {
+  margin-bottom: 0;
+}
+.booking-item__options {
+  gap: 24px;
+  margin-left: 32px;
+  margin-right: 24px;
+  display: flex;
+  align-items: center;
+}
+.booking-item__options .default-button {
+
+}
+.info-i {
+  margin-left: 5px;
+}
+.booking__option__req {
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 10px;
+  line-height: 1;
+  background: #FCE7E0;
+  color: #D97751;
+  font-weight: 700;
+}
+
+.booking-items__label {
+  margin-bottom: 14px;
+}
+.booking-items__label h4 {
+  font-size: 20px;
+  color: var(--text-color);
+  font-weight: 600;
+}
+/* ---booking-section---end */
+
+
+/* edit-modal */
+.edit-modal-content {
+  border-radius: 8px;
+}
+.modal-header {
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #DEE2E6;
+}
+.modal-header h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+  color: #1c2935;
+}
+.modal-header .modal-close {
+  font-size: 22px;
+  color: #1c29359d;
+  transition: 0.3s;
+}
+.modal-header .modal-close:hover {
+  color: var(--theme__color1);
+}
+.modal-body {
+
+}
+
+.form {
+  padding: 20px 32px 32px;
+}
+.form__main {
+  --gap-x: 24px;
+  --gap-y: 13px;
+  margin: calc(var(--gap-y) * -0.5) calc(var(--gap-x) * -0.5);
+  display: flex;
+  flex-wrap: wrap;
+}
+.form__main [class*="col-w"] {
+  padding: calc(var(--gap-y) * 0.5) calc(var(--gap-x) * 0.5);
+}
+.form__main .col-w-50 {
+  width: 50%;
+}
+.form__main .col-w-100 {
+  width: 100%;
+}
+.single-input-x {
+  width: 100%;
+}
+.input-x-label {
+  font-size: 12px;
+  width: 100%;
+}
+.input-x-outer {
+  width: 100%;
+}
+.input-x {
+  padding: 11px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #212529;
+  width: 100%;
+  border: 1px solid #CED4DA;
+}
+.input-x::placeholder {
+  opacity: 0.6;
+}
+.form-submit-row {
+  display: flex;
+  justify-content: center;
+  margin-top: 8px;
+}
+.submit {
+  min-height: 48px;
+  border-radius: 7px;
+}
+/* edit-modal-end */
+
+
+
+
